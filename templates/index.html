@@ -1,0 +1,29 @@
+{%extends "layout.html"%}
+
+{%block head%}
+PriceStark
+{%endblock%}
+
+
+{%block body%}
+<div class="header">
+    <h1 class="display-4">Search Product </h1>
+    <form action = "{{url_for('getparts')}}" method = "post">
+        <div class="form-group">
+            <label for="category" class="lead">Item Category</label>
+            <select class = "form-control" id = "category" placeholder = "Part Category"name = "Category_Option">
+                <option value = "Computer Parts">Computer Parts</option>
+                <option value = "Mobiles">Mobiles</option>
+                <option value = "Headphones">Headphones</option>
+                <option value = "Furniture">Furniture</option>
+                <option value = "Shoes">Shoes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name" class="lead">Item Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Part Name" name = "partname" autocomplete = "off">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+{%endblock%}
